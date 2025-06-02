@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>Hello Django</h1>
+
+    <!--forloop.counter-->
+    {% for i in clist %}
+    <div>{{forloop.counter}}{{". "}} {{i}}</div>
+    {% endfor %}
+    <br />
+
+    <!--table.counter0-->
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+     {% for i in student_details %}
+      <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+      </tr>
+     <tr />
+      {% endfor %}
+    </table>
+    <br />
+
+    <!--if else.counter0-->
+    {% if number|length > 2 %} {% for i in number %} {% if i > 4 %}
+    <div>{{i}}</div>
+    {% endif %} {% endfor %} {% else %} no data {% endif %}
+  </body>
+</html>
